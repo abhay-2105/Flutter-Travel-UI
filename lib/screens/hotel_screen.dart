@@ -41,10 +41,13 @@ class HotelScreen extends StatelessWidget {
           Stack(
             alignment: Alignment.bottomLeft,
             children: [
-              Image.asset(
-                height: 350,
-                destination.imageUrl!,
-                fit: BoxFit.cover,
+              Hero(
+                tag: 'heroTag' '${destination.city}',
+                child: Image.asset(
+                  height: 350,
+                  destination.imageUrl!,
+                  fit: BoxFit.cover,
+                ),
               ),
               Container(
                 height: 350,

@@ -93,11 +93,15 @@ class TopDestinations extends StatelessWidget {
                                     elevation: 5,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(20),
-                                      child: Image.asset(
-                                        height: 200,
-                                        width: 200,
-                                        destinations[index].imageUrl!,
-                                        fit: BoxFit.cover,
+                                      child: Hero(
+                                        tag: 'heroTag'
+                                            '${destinations[index].city}',
+                                        child: Image.asset(
+                                          height: 200,
+                                          width: 200,
+                                          destinations[index].imageUrl!,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                     ),
                                   ),
